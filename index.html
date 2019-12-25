@@ -5,39 +5,64 @@
 .bg {
   /* The image used */
   background-image: url("image.jpg");
-font-color:"white";
-	font-family:"Monotype Corsiva";
-	font-size:50px;
+  margin:-10px -10px -10px -10px;
+  font-color:"white";
+  font-family:"Monotype Corsiva";
+  font-size:50px;
   /* Full height */
   height: 100%; 
-
   /* Center and scale the image nicely */
   background-repeat: no-repeat;
-  background-size: cover;
-}	    
-	    
-    </style>
+ 
+
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  
+}	
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px 2px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+ </style>
   </head>
  <body> 
 
-	  <div class="bg">
+<div class="bg">
 
-		  <h1><font color="white">Merry Christmas!</font></h1>
-  
+  <h1><font color="white">Merry Christmas!</font></h1>
   <img src="https://codecademy-content.s3.amazonaws.com/courses/web-beginner-en-9xjis/images/snowman.png" id="snowman">
- 
-	 
-	 <button onclick="typeWriter()">Message</button>
-         <p><span>From,</span> Amulya</p>
-	<p id="demo"></p>
+  <button class="button button1" onclick="typeWriter()">Message</button>
+  <p id="demo" style="color:white;font-family: Comic Sans Ms;font-color:white;"></p>
 
-	
-
-   <script>
+</div>
+  <script>
 	var i = 0;
-	var txt = 'WISH YOU A MERRY CHRISTMAS ~SANTA';
+	var txt = 'Time For Celebration And Gathering';
 	var speed = 50;
-
 	function typeWriter() {
 	  if (i < txt.length) {
 	    document.getElementById("demo").innerHTML += txt.charAt(i);
@@ -46,7 +71,7 @@ font-color:"white";
 	  }
 	}
 </script>	
-</div>
+
   
   </body>
 </html>
