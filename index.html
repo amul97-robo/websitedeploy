@@ -1,13 +1,33 @@
 <html>
   <head>
+    <style>
+    body {
+  background-image: url('image.jpg');
+}
+    </style>
   </head>
- <body bacground="image.jpg"> 
-<section>
+ <body> 
+
   <h1>Merry Christmas!</h1>
   
   <img src="https://codecademy-content.s3.amazonaws.com/courses/web-beginner-en-9xjis/images/snowman.png" id="snowman">
-  
+  <button onclick="typeWriter()">Message</button>
   <p><span>From,</span> Amulya</p>
-</section>
+	<p id="demo"></p>
+
+   <script>
+	var i = 0;
+	var txt = 'Lorem ipsum dummy text blabla.';
+	var speed = 50;
+
+	function typeWriter() {
+	  if (i < txt.length) {
+	    document.getElementById("demo").innerHTML += txt.charAt(i);
+	    i++;
+	    setTimeout(typeWriter, speed);
+	  }
+	}
+</script>	
+  
   </body>
 </html>
