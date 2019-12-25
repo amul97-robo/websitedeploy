@@ -1,9 +1,28 @@
 <html>
   <head>
     <style>
+	   body, html {
+  height: 100%;
+}
+
     body {
   background-image: url('image.jpg');
+  background-repeat: no-repeat;
 }
+	    
+.bg {
+  /* The image used */
+  background-image: url("img_girl.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}	    
+	    
     </style>
   </head>
  <body> 
@@ -11,9 +30,13 @@
   <h1>Merry Christmas!</h1>
   
   <img src="https://codecademy-content.s3.amazonaws.com/courses/web-beginner-en-9xjis/images/snowman.png" id="snowman">
-  <button onclick="typeWriter()">Message</button>
+ 
+	 
+	 <button onclick="typeWriter()">Message</button>
   <p><span>From,</span> Amulya</p>
 	<p id="demo"></p>
+
+	 <div class="bg"></div>
 
    <script>
 	var i = 0;
